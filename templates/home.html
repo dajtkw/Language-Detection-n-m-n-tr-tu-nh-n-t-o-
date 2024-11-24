@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Language Detector</title>
+</head>
+<body>
+    <div class="top">
+        <h1 class="heading">Language Detector</h1>
+    </div>
+
+    <form action="/predict" method="POST">
+        <label for="text" style="display: none;">Enter text to detect language</label>
+        <textarea id="text" name="text" class="text_area" rows="4" placeholder="Type your text here..." required></textarea>
+        <br>
+        <input type="submit" value="Detect Language" class="button">
+    </form>
+
+    <h1 class="result">{{ pred }}</h1>
+</body>
+</html>
